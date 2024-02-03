@@ -1,10 +1,16 @@
 <!DOCTYPE html>
 <html lang = "en">
     <head>
+        <style>
+            .sign_info { text-align: center;}
+            .new-item { padding: 10px; }
+        </style>
         <title>ENSF 381 Assignment1</title>
+        <link rel="shortcut icon" href="images/icon.ico" type="image/x-icon">
         <link rel = "stylesheet" href = "styles.css">
     </head>
     <body>
+        
         <header>
             <img src = "./images/Logo.png" width = "400px" alt = "SKEEK Shop Logo">
         </header>
@@ -13,7 +19,9 @@
             <a href = "./index.html">Home Page</a>
             <a href = "./products.html">Our Products</a>
         </div>
+    <fieldset>
         <form>
+
             <label for = "username"> Username: </label>
             <input type = "text" id="username" name="username" placeholder="Enter your Username" required>
             <br>
@@ -22,12 +30,17 @@
             <input type = "text" id="password" name="password" placeholder="Enter your Password" required>
             <br>
 
-            <button type = "submit" > Login</button>
+            <button onclick="login()">Login</button>
+            <p></p>
+            <h3 style="color: cadetblue;"><u> Don't have an account?<br>sign up now!</u></h3>
+            <button onclick="signup()">Sign up</button>
 
+        </fieldset>
 
 
 
         </form>
+    </fieldset>
     </body>
     </html>
         <header>
