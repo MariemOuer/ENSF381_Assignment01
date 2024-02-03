@@ -4,6 +4,11 @@
         <style>
             .sign_info { text-align: center;}
             .new-item { padding: 10px; }
+            .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
         </style>
         <title>ENSF 381 Assignment1</title>
         <link rel="shortcut icon" href="images/icon.ico" type="image/x-icon">
@@ -12,35 +17,44 @@
     <body>
         
         <header>
-            <img src = "./images/Logo.png" width = "400px" alt = "SKEEK Shop Logo">
+            <h2>
+                <img src = "./images/Logo.png" width = "400px" alt = "SKEEK Shop Logo" class = "center">
+                Skeek
+            </h2>
+            
         </header>
         <div>
             <a href = "./contact.html">Contact Us</a>
             <a href = "./index.html">Home Page</a>
             <a href = "./products.html">Our Products</a>
         </div>
-    <fieldset>
-        <form>
+        <main class="sign_info new-item">
+            <h2>Login</h2>
+            <form>
 
-            <label for = "username"> Username: </label>
-            <input type = "text" id="username" name="username" placeholder="Enter your Username" required>
-            <br>
+                <label for = "username"> Username: </label>
+                <input type = "text" id="username" name="username" placeholder="Enter your Username">
+                <br>
 
-            <label for = "password"> Password: </label>
-            <input type = "text" id="password" name="password" placeholder="Enter your Password" required>
-            <br>
+                <label for = "password"> Password: </label>
+                <input type = "text" id="password" name="password" placeholder="Enter your Password" >
+                <br>
 
-            <button onclick="login()">Login</button>
-            <p></p>
-            <h3 style="color: cadetblue;"><u> Don't have an account?<br>sign up now!</u></h3>
-            <button onclick="signup()">Sign up</button>
+                <button onclick="login()">Login</button>
+                <p></p>
+                <h3 style="color: rgb(168, 48, 48);"><u> Don't have an account?<br>sign up now!</u></h3>
+                    <button>Sign up</button>
 
-        </fieldset>
+        </main>
 
 
 
         </form>
     </fieldset>
+    <footer>
+        <p> © 2024 Skeek</p>
+    </footer>
+
     </body>
     </html>
         <header>
