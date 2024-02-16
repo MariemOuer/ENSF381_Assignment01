@@ -1,0 +1,45 @@
+/* for the header, nav bar and footer*/
+header {
+    background-color: #333;
+    padding:20px;
+    margin: 0px;
+    display:flex;
+}
+
+.logo img{
+    width: 140px;
+
+}
+
+.website_name{
+    margin-left: auto;
+    margin-top: 30px;
+}
+
+nav {
+    background-color: #333;
+    display:flex;   
+    justify-content: space-around;
+    width:100%;
+    padding-top:10px;
+    padding-left:20px;
+    color: white;
+}
+/*makes the links white and removes underline*/
+nav a {
+    text-decoration: none; 
+    color: white;
+}
+
+footer{
+    background-color: #333;
+    padding: 10px;
+    margin:0px;
+    color:white
+
+}
+
+/* contact page*/
+/* index page*/
+/* login page*/
+/* products page*/
