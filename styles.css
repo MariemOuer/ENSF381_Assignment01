@@ -40,6 +40,16 @@ footer{
 }
 
 /* contact page*/
+.contact{
+/*flex-bo*/
+background-color: #ddd;
+padding:20px;
+margin:20px;
+border-radius:10px;
+}
+.hover{
+    color:007BFF;
+}
 /* index page*/
 /* login page*/
 /* products page*/
