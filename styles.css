@@ -21,8 +21,10 @@ nav {
     display:flex;   
     justify-content: space-around;
     width:100%;
-    padding-top:10px;
-    padding-left:20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
     color: white;
 }
 /*makes the links white and removes underline*/
@@ -35,8 +37,8 @@ footer{
     background-color: #333;
     padding: 10px;
     margin:0px;
-    color:white
-
+    color:white;
+    text-align: center;
 }
 
 /* contact page*/
@@ -51,6 +53,75 @@ border-radius:10px;
     color:007BFF;
 }
 /* index page*/
+
+.shop-now{
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 20px;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+ }
+ 
+ .headeri {
+    display: flex;
+    background: #333;
+    padding: 20px;
+    margin: 0;
+    justify-content: space-between;
+    padding-right: 100px;
+ }
+ 
+ 
+ .headeri img {
+    margin-right: 80px;
+    left: 0;
+    width: 140px
+ }
+ 
+ 
+ .headeri h1 {
+    color: white;
+    right: 0;
+ }
+ 
+ .about-us {
+    display: flex;
+    justify-content: center;
+    background-color: #ddd;
+    padding: 20px;
+    margin: 20px;
+  }
+ 
+ 
+ .about-container {
+    background: #ddd;
+ }
+ 
+ 
+ .about-para p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 20px;
+ }
+
+ .customer-reviews {
+    display: flex;
+}
+
+.customer-content {
+    background: #ddd;
+    padding: 20px;
+    margin: 20px;
+    width: 100%;
+}
+ 
+
+
 /* login page*/
 /* products page*/
 

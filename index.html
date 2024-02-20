@@ -5,69 +5,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <style>
-        .center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-        .sign_info { text-align: center;}
-    </style>
     <title>ENSF 381 Assignment1</title>
     <link rel="shortcut icon" href="images/icon.ico" type="image/x-icon">
     <link rel = "stylesheet" href = "styles.css">
 <!-- Add meta tags, title, and link to styles.css here -->
 </head>
 <body>
-<header>
-    <table>
-        <tr>
-            <td> 
-                <img src = "./images/Logo.png" width = "400px">
-            </td>
-            <td> 
-                <h1>Skeek</h1>
-            </td>
-        </tr>
-    </table>
+<header class="headeri">
+    <img src = "./images/Logo.png">
+    <h1>Skeek</h1>
 </header>
-<div style="text-align: center ">
-    <a href = "./contact.html">Contact Us</a>
+<nav style="text-align: center" class="main-nav" >
+    <a href = "./index.html">Home Page</a>
     <a href = "./login.html">Login Page</a>
     <a href = "./products.html">Our Products</a>
-</div>
+    <a href = "./contact.html">Contact Page</a>
+</nav>
 <main>
-    <h2> About us </h2>
+    
 
 <section class="about-us">
-    
-    <p>At Skeek, we are more than just an online sneaker shop; we are a passionate community of sneaker enthusiasts 
-        dedicated to bringing you the latest and greatest in sneaker fashion. Born out of a shared love for kicks and 
-        an unwavering commitment to authenticity, Skeek is your go-to destination for all things sneaker-related.</p>
-<i>
-    <p>Our Journey:</p>
-</i>
-    <p>Founded with the vision of curating a diverse collection of sneakers that caters to every style and taste, Skeek 
-        has evolved into a hub where sneaker culture meets cutting-edge fashion. Our journey began with a simple idea – to create an 
-        online space where sneakerheads, fashionistas, and casual enthusiasts alike could explore, discover, and shop the hottest kicks on the market.</p>
-<i>
-    <p>What Sets Us Apart: </p>
-</i>
-    <p>At Skeek, we understand that sneakers are more than just footwear; they are a form of self-expression. That's why 
-        we meticulously handpick each pair, ensuring that every shoe in our collection reflects the latest trends, premium 
-        quality, and a touch of individuality. From iconic classics to limited-edition releases, Skeek is where style meets substance.</p>
-        
+    <div class="about-container">
+        <h1><b>About us</b></h1>
+        <div class="about-para">
+            <p>At Skeek, we are more than just an online sneaker shop; we are a passionate community of sneaker enthusiasts 
+                dedicated to bringing you the latest and greatest in sneaker fashion. Born out of a shared love for kicks and 
+                an unwavering commitment to authenticity, Skeek is your go-to destination for all things sneaker-related.
+                Founded with the vision of curating a diverse collection of sneakers that caters to every style and taste, Skeek 
+                has evolved into a hub where sneaker culture meets cutting-edge fashion. Our journey began with a simple idea – to create an 
+                online space where sneakerheads, fashionistas, and casual enthusiasts alike could explore, discover, and shop the hottest kicks on the market.</p>
+        </div>
+    </div>
 </section>
-<section class="shop-now">
+
+<section>
     <a href = "./products.html"> 
-        <button>Shop Now</button>
+        <button class="shop-now">Shop Now</button>
     </a>
     <!-- Shop Now Button (as a link to the Products page) -->
     </section>
     <!-- Customer Reviews/Testimonials Section -->
     <section class="customer-reviews">
-        <h3> Customer Reviews</h3>
         
+        <div class = "customer-content">
+            <h1> Customer Reviews</h1>
         <blockquote>
         <p> 
             ⭐️⭐️⭐️⭐️⭐️
@@ -92,10 +73,12 @@
                 – it's a true reflection of the latest trends and styles. Skeek, you've gained a customer for life!"
             </p>
             <p> - Daniel Cooked </p>
+        </blockquote>
+        </div>
     </section>
     </main>
-    <footer class = "sign_info">
-        <p>© 2024 Skeek</p>
+    <footer class= "footer">
+        <p>© 2024 Skeek. All rights reserved</p>
     </footer>
     </body>
     </html>
