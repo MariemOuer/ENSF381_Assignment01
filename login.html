@@ -1,40 +1,25 @@
 <!DOCTYPE html>
 <html lang = "en">
     <head>
-        <style>
-            .sign_info { text-align: center;}
-            .new-item { padding: 10px; }
-            .center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-        </style>
         <title>ENSF 381 Assignment1</title>
         <link rel="shortcut icon" href="images/icon.ico" type="image/x-icon">
         <link rel = "stylesheet" href = "styles.css">
     </head>
     <body>
         
-        <header>
-            <table>
-                <tr>
-                    <td> 
-                        <img src = "./images/Logo.png" width = "400px">
-                    </td>
-                    <td> 
-                        <h1>Skeek</h1>
-                    </td>
-                </tr>
-            </table>
+        <header class="headeri">
+            <img src = "./images/Logo.png">
+            <h1>Skeek</h1>
         </header>
-        <div style="text-align: center ">
-            <a href = "./contact.html">Contact Us</a>
+
+        <nav style="text-align: center" class="main-nav" >
             <a href = "./index.html">Home Page</a>
+            <a href = "./login.html">Login Page</a>
             <a href = "./products.html">Our Products</a>
-        </div>
-        <main class="sign_info new-item">
-            <h2>Login</h2>
+            <a href = "./contact.html">Contact Page</a>
+        </nav>
+
+        <main class="login">
             <form>
                 <label for="username">Username:</label>
                 <input type="text" id="username" name="username" placeholder="Enter your Username">
@@ -49,14 +34,13 @@
     
             <p></p>
     
-            <h3><u>Don't have an account?<br>Sign up now!</u></h3>
-            <a href="./signup.html">
-                <button type="button" style="color:rgb(168, 48, 48)">Sign up</button>
-            </a>
+            <p >Don't have an account? <a class="signup-link" href="signup.html">Sign up here</a></p>
         </main>
-    <footer class = "sign_info">
-        <p> © 2024 Skeek. All rights reserved</p>
-    </footer>
+
+
+<footer class = "footer">
+        <p>© 2024 Skeek. All rights reserved</p>
+</footer>
 
     </body>
     </html>
