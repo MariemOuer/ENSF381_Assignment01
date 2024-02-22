@@ -42,16 +42,59 @@ nav a {
 }
 
 /* contact page*/
-.contact{
-/*flex-bo*/
-background-color: #ddd;
-padding:20px;
-margin:20px;
-border-radius:10px;
+.contact {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start; 
+    background-color: #ddd;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
 }
-.hover{
-    color:007BFF;
+.contact-link:hover {
+    text-decoration: underline; /* add underline on hover */
+    }
+
+.contact-link{
+    color: #007BFF;
+    margin: 10px;
+    text-decoration: none; 
+    transition: text-decoration 0.3s; 
+    }
+
+.contact-method{
+    background-color: #ddd;
+    padding: 0px;
+    margin: 0px;
+    border-radius: 10px;
 }
+
+.contact button{
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
+    opacity: 0.5;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s, opacity 0.3s; 
+}
+
+.contact label{
+    display: block;
+    margin: 10px;
+}
+
+
+.contact input {
+    background-color: #fff;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+  }
+
+
 /* index page*/
 
 .shop-now{
@@ -129,7 +172,7 @@ border-radius:10px;
     padding:20px;
     margin:20px;
     border-radius:10px;
-    text-align: center;
+    text-align: centxer;
     }
 
 .login label{
