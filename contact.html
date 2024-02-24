@@ -5,7 +5,7 @@
     <link rel="shortcut icon" href="images/icon.ico" type="image/x-icon">
     <link rel = "stylesheet" href = "styles.css">
 <header>
-    <div class="logo">
+    <div class="logo"> 
         <img src="./images/Logo.png" width="400px">
     </div>
     <div class="website_name">
@@ -22,67 +22,47 @@
 <main>
     <main class="contact">
         <form>
-            <h2> 
-                Reach Out To Us
-            </h3> 
-            <p> 
-                Feel free to reach out reguarding any questions, feedback or just to say hello, we we'd love to hear from you! 
-            </p>  
-            <h3> 
-                Email
-            </h3> 
-            <p> 
-                Email us at: <a class="signup-link" href = "skeeekcostumerservice@gmail.com">skeeekcostumerservice@gmail.com</a> 
-            </p>        
-            <h3> 
-                Phone
-            </h3> 
-            <p> 
-                Call us at: <a class="signup-link"> (111)-111-1111 </a>
-            </p> 
-            <h3> 
-                Social Media
-            </h3>       
-            <p> 
-                Connect with us on social media:
-            </p>  
-             <p class="hover"> 
-                <a class="signup-link" href = "https://www.instagram.com/"> Instagram </a>   
-             </p>
-            <p class="hover"> 
-                <a class="signup-link" href = "https://www.facebook.com/"> Facebook</a>   
-            </p>
+            <h2>Reach Out To Us</h2> 
+            <p> Feel free to reach out reguarding any questions, feedback or just to say hello, we we'd love to hear from you!</p>  
 
-            <h3> 
-                Feel free to reach out through our form below:
-            </h3>
-    
-            <label for="First Name">First Name:</label>
-            <input type="text" id="first name" name="first name" placeholder="Enter your first name">
-            <br><br>
-    
-            <label for="Last Name">Last Name:</label>
-            <input type="Last Name" id="Last Name" name="Last Name" placeholder="Enter your last name">
-            <br><br>
-    
-            <label for="Email Adress">Email Adress:</label>
-            <input type="Email Adress" id="Email Adress" name="Email Adress" placeholder="Enter your Email Adress">
-            <br><br>
-    
-            <label for="Message">Message:</label>
-            <input type="Message" id="Message" name="Message" placeholder="Enter your message">
-            <br><br>
-    
-            <button type="Send Inquiries" class="button">Send Inquiries</button>
-        </div>
-        </form>
+            <div class="contact-method">
+                <h3>Email</h3>
+                <p>Email us at:<a class="contact-link" href="mailto:skeeekcostumerservice@gmail.com"> <u>skeeekcostumerservice@gmail.com</u></a></p>
+            </div>
+            
+            <div class="contact-method">
+                <h3>Phone</h3>
+                <p>Call us at: +1 (430) 734-1241</p>
+            </div>
+            
+            <div class="contact-method">
+                <h3>Social Media</h3>
+                <p>Connect with us on social media:</p>
+                <a class="contact-link hover" href="https://www.instagram.com/">Instagram</a>
+                <br>
+                <a class="contact-link hover" href="https://www.facebook.com/">Facebook</a>
+            </div>
 
-   
-</main>
+                <!-- bonus for further pratice -->
+                <h3>Feel free to reach out through our form below:</h3>
+                <label for="first-name" class="contact-label">First Name:</label>
+                <input type="text" id="first-name" name="first-name" class="contact-input" placeholder="Enter your first name">
+                <br><br>
+                <label for="last-name" class="contact-label">Last Name:</label>
+                <input type="text" id="last-name" name="last-name" class="contact-input" placeholder="Enter your last name">
+                <br><br>
+                <label for="email-address" class="contact-label">Email Address:</label>
+                <input type="email" id="email-address" name="email-address" class="contact-input" placeholder="Enter your Email Address">
+                <br><br>
+                <label for="message" class="contact-label">Message:</label>
+                <textarea id="message" name="message" class="contact-input" placeholder="Enter your message"></textarea>
+                <br><br>
+                <button type="submit" class="contact-button">Send Inquiries</button>
+            </form>
+    </main>
 
 <footer style = "text-align:center"class="footer">
     <p> © 2024 Skeek. All rights reserved </p>
 </footer>
-
 
 </html>

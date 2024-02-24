@@ -44,32 +44,33 @@ nav a {
 /* contact page*/
 .contact {
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start; 
-    background-color: #ddd;
-    padding: 20px;
-    margin: 20px;
-    border-radius: 10px;
+    justify-content: center;    /* Aligns horizontally using flexbox */
+    align-items: center;        /* Aligns vertically using flexbox */
+    background-color: #ddd;   /* medium gray background */
+    padding: 20px;              /* 20 px padding */
+    margin: 20px;               /* 20 px margin */
+    border-radius: 10px;       /* rounds corners */
 }
-.contact-link:hover {
-    text-decoration: underline; /* add underline on hover */
+.contact-link:hover {  /* adds underline when hovering */
+    text-decoration: underline; 
     }
 
-.contact-link{
+.contact-link{ /* changes text color to blue when hovering over */
     color: #007BFF;
-    margin: 10px;
+    margin: 0px;
     text-decoration: none; 
     transition: text-decoration 0.3s; 
     }
 
-.contact-method{
-    background-color: #ddd;
-    padding: 0px;
-    margin: 0px;
-    border-radius: 10px;
+.contact-method{ /* email, phone, social media  */
+    background-color: #ddd;   /* medium gray background */
+    padding: 0px;   /* 0 px padding */
+    margin: 0px;    /* 0 px margin */
+    border-radius: 10px; /* rounds corner */
 }
 
-.contact button{
+/* extra additions to further pratice web dev */
+.contact button{ /* costumizes the button*/
     background-color: #4CAF50;
     color: white;
     padding: 10px;
@@ -80,14 +81,19 @@ nav a {
     text-align: center;
     transition: background-color 0.3s, opacity 0.3s; 
 }
+.contact button:hover {
+    background-color: #45A049;
+    opacity: 1.0;
+}
+  
 
-.contact label{
+.contact label{ 
     display: block;
     margin: 10px;
 }
 
 
-.contact input {
+.contact input { /* costumizes the input boxes */
     background-color: #fff;
     padding: 10px;
     margin: 10px;
