@@ -170,11 +170,13 @@ nav a {
 /* login page*/
 
 .login{
-    background-color: #ddd;
-    padding:20px;
-    margin:20px;
-    border-radius:10px;
-    text-align: center;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ddd;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
     }
 
 .login label{
@@ -207,14 +209,13 @@ nav a {
   opacity: 1.0;
 }
 
-.signup-link {
+.login a{
     color: #007BFF;
     margin: 10px;
-    text-decoration: none; 
-    transition: text-decoration 0.3s; 
+    text-decoration: none;
 }
 
-.signup-link:hover {
+.login a:hover {
     text-decoration: underline; /* add underline on hover */
   }
 
