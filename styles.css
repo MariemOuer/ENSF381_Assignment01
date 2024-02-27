@@ -222,89 +222,87 @@ nav a {
 
 
 /* products page */
-/* Main container for product list */
 .container {
     margin: 0 auto; /* Centers the container horizontally */
-    display: flex; /* Enables flexible box layout */
-    flex-wrap: wrap; /* Allows items to wrap onto multiple lines */
-    justify-content: space-around; /* Distributes space around items evenly */
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-around; 
     background-color: #ddd; /* Medium gray background */
-    padding: 20px; /* Adds padding inside the container */
-    border-radius: 8px; /* Rounds the corners of the container */
-    max-width: 100%; /* Ensures container width does not exceed 100% */
+    padding: 20px; 
+    border-radius: 8px; /* Rounds the corners */
+    max-width: 100%;  
 }
 
-/* Styling for each individual product */
+/* Styling for product */
 .product {
     background-color: #f9f9f9; /* Light grey background */
     padding: 20px; /* Adds padding inside each product */
-    box-sizing: border-box; /* Includes padding and border in the width & height */
+    box-sizing: border-box; 
     border-radius: 10px; /* Rounds the corners of each product */
-    display: flex; /* Enables flex layout for contents of the product */
+    display: flex; 
     flex-direction: column; /* Stacks flex items vertically */
-    align-items: center; /* Centers items horizontally within the product */
+    align-items: center; 
     justify-content: center; /* Centers items vertically within the product */
     margin-bottom: 20px; /* Adds space below each product */
-    transition: background-color 0.3s ease; /* Smooth transition for background color */
+    transition: background-color 0.3s ease; 
 }
 
-/* Hover effect for each product */
+/* Hover effect - product */
 .product:hover {
     background-color: #ffffff; /* Changes background to white on hover */
 }
 
-/* Styling for product images */
+/* Styling - images */
 .product img {
     width: 100%; /* Responsive width, ensures image does not exceed its container */
-    max-width: 300px; /* Maximum width of the image */
+    max-width: 300px; 
     height: auto; /* Maintains aspect ratio */
-    border-radius: 8px; /* Rounds the corners of the image */
+    border-radius: 8px;
     margin-bottom: 10px; /* Adds space below the image */
 }
 
-/* Styling for product price text */
+/* Styling - price */
 .product .price {
-    color: #007BFF; /* Blue color */
+    color: #007BFF; 
     font-weight: bold; /* Bold font for price */
-    margin-bottom: 10px; /* Space between price and button */
+    margin-bottom: 10px; 
 }
 
-/* Styling for "Add to Cart" button */
+/* Styling - button */
 .product-button {
     background-color: #4CAF50; /* Green background */
     color: white; /* White text */
-    padding: 10px; /* Padding inside the button */
+    padding: 10px; 
     border: none; /* Removes default border */
     border-radius: 5px; /* Rounds the corners of the button */
-    cursor: pointer; /* Changes cursor to indicate button is clickable */
+    cursor: pointer; 
     transition: background-color 0.3s; /* Smooth transition for background color */
     width: auto; /* Automatically adjusts width */
-    margin: 10px; /* Margin around the button */
+    margin: 10px; 
 }
 
 .section-title {
     width: 100%; /* Ensures the title takes full width */
     text-align: center; /* Centers the title text */
-    margin: 10px 0; /* Adds vertical spacing around the title */
-    /* Add any additional styling for the title here */
+    margin: 10px 0; 
 }
 
-/* Hover effect for the button */
+/* Hover effect - button */
 .product-button:hover {
     background-color: #45A049; /* Slightly darker shade of green on hover */
 }
 
-/* Responsive design for smaller screens */
+/* Responsive design for smaller screens - used the lab as reference*/
 @media (max-width: 768px) {
     .product {
-        width: 100%; /* Full width for each product on smaller screens */
+        width: 100%; 
     }
 }
 
-/* Responsive design for larger screens */
+/* Responsive design for larger screens - used the lab as reference*/
 @media (min-width: 769px) {
     .product {
         width: calc(50% - 40px); /* Adjusts width for two products per row on larger screens */
-        margin: 20px; /* Space around each product */
+        margin: 20px; 
     }
 }
