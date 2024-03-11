@@ -305,7 +305,7 @@ nav a {
         width: calc(50% - 40px); /* Adjusts width for two products per row on larger screens */
         margin: 20px; 
     }
-} 
+}  
 .cart-container {
     background-color: #ddd; /* Same grey as product listings */
     text-align: center;
@@ -329,6 +329,8 @@ nav a {
     grid-template-columns: auto min-content; /* Auto for product details, min-content for the button */
     gap: 10px; /* Space between the details and the remove button */
     align-items: center;
+    max-width: 80%; /* Limit the width of each cart item */
+    margin: 0 auto; /* Center each cart item */
 }
 
 .cart-item-details {

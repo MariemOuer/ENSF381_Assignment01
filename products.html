@@ -87,55 +87,68 @@
     </footer>
     
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            function addToCart(productName, price) {
-                const cartItemsContainer = document.getElementById('cart-items');
-                let cartItem = findCartItem(productName);
-    
-                if (cartItem) {
-                    let quantity = cartItem.querySelector('.quantity');
-                    quantity.innerText = parseInt(quantity.innerText) + 1;
-                } else {
-                    cartItem = document.createElement('div');
-                    cartItem.classList.add('cart-item');
-                    cartItem.innerHTML = `
-                        <div class="cart-item-details">
-                            <span>${productName}</span> - 
-                            <span>${price}</span> - 
-                            <span class="quantity">1</span>
-                        </div>
-                        <button class="remove-button">Remove</button>
-                    `;
-                    cartItemsContainer.appendChild(cartItem);
-        
-                    let removeButton = cartItem.querySelector('.remove-button');
-                    removeButton.addEventListener('click', function() {
-                        removeItem(cartItem, productName);
-                    });
-                }
-            }
-        
-            function findCartItem(productName) {
-                return Array.from(document.querySelectorAll('.cart-item')).find(item => 
-                    item.querySelector('.cart-item-details').innerText.includes(productName));
-            }
-        
-            function removeItem(cartItem, productName) {
+    // When the page content has loaded, add event listeners to buttons
+    document.addEventListener('DOMContentLoaded', function() {
+        // Function to handle adding items to the cart
+        function addToCart(productName, price) {
+            // Container where cart items will be displayed
+            const cartItemsContainer = document.getElementById('cart-items');
+            // Look for an existing item in the cart
+            let cartItem = findCartItem(productName);
+            
+            // If item already exists, increase its quantity
+            if (cartItem) {
                 let quantity = cartItem.querySelector('.quantity');
-                quantity.innerText = parseInt(quantity.innerText) - 1;
-                if (parseInt(quantity.innerText) === 0) {
-                    cartItem.remove();
-                }
-            }
-        
-            document.querySelectorAll('.product-button').forEach(button => {
-                button.addEventListener('click', function() {
-                    const product = button.closest('.product');
-                    const productName = product.querySelector('h5').innerText;
-                    const price = product.querySelector('.price').innerText.split('|')[0].trim();
-                    addToCart(productName, price);
+                quantity.innerText = parseInt(quantity.innerText) + 1;
+            } else {
+                // If not, create a new cart item
+                cartItem = document.createElement('div');
+                cartItem.classList.add('cart-item');
+                cartItem.innerHTML = `
+                    <div class="cart-item-details">
+                        <span>${productName}</span> - 
+                        <span>${price}</span> - 
+                        <span class="quantity">1</span>
+                    </div>
+                    <button class="remove-button">Remove</button>
+                `;
+                cartItemsContainer.appendChild(cartItem);
+                
+                // Add click event for the new remove button
+                let removeButton = cartItem.querySelector('.remove-button');
+                removeButton.addEventListener('click', function() {
+                    removeItem(cartItem);
                 });
+            }
+        }
+        
+        // Function to find a cart item by its product name
+        function findCartItem(productName) {
+            // Search all cart items for one that matches the product name
+            return Array.from(document.querySelectorAll('.cart-item')).find(item => 
+                item.querySelector('.cart-item-details').textContent.includes(productName));
+        }
+        
+        // Function to handle removing items from the cart
+        function removeItem(cartItem) {
+            // Find the quantity span and decrease the quantity
+            let quantity = cartItem.querySelector('.quantity');
+            quantity.innerText = parseInt(quantity.innerText) - 1;
+            // If quantity reaches 0, remove the item from the cart
+            if (parseInt(quantity.innerText) === 0) {
+                cartItem.remove();
+            }
+        }
+        
+        // Attach addToCart function to click event of each 'Add To Cart' button
+        document.querySelectorAll('.product-button').forEach(button => {
+            button.addEventListener('click', function() {
+                // Get the product's name and price from the DOM
+                const product = button.closest('.product');
+                const productName = product.querySelector('h5').innerText;
+                const price = product.querySelector('.price').innerText.split('|')[0].trim();
+                addToCart(productName, price);
             });
         });
-    </script>
-    
+    });
+</script>
