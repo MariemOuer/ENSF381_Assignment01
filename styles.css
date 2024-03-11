@@ -306,3 +306,27 @@ nav a {
         margin: 20px; 
     }
 }
+
+.remove-button:hover {
+    background-color: #ff0000;
+}
+.cart-container {
+    background-color: #f3f3f3; /* Replace with the actual grey color used for products */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    padding: 20px; /* Add some padding for spacing */
+}
+
+.cart-container h3,
+.cart-container .cart-item {
+    margin-bottom: 20px; /* Space between items */
+}
+
+/* Simplify the cart item styling for a seamless look */
+.cart-item {
+    width: auto;
+    padding: 5px 0;
+}

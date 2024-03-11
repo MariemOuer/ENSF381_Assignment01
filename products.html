@@ -76,8 +76,74 @@
         <!-- Add more products as needed -->
     </main>
     
+    <!-- Cart Section -->
+    <div id="cart" class="cart-container">
+        <h3>Shopping Cart</h3>
+        <div id="cart-items"></div>
+    </div>
+
     <footer class="footer">
         <p>© 2024 Skeek. All rights reserved</p>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            function addToCart(productName, price) {
+                const cartItemsContainer = document.getElementById('cart-items');
+                let cartItem = findCartItem(productName);
+    
+                if (cartItem) {
+                    let quantity = cartItem.querySelector('.quantity');
+                    quantity.innerText = parseInt(quantity.innerText) + 1;
+                    alert(`${productName} quantity updated in the cart.`);
+                } else {
+                    cartItem = document.createElement('div');
+                    cartItem.classList.add('cart-item');
+                    cartItem.innerHTML = `
+                        <span>${productName}</span> - 
+                        <span>${price}</span> - 
+                        <span class="quantity">1</span>
+                        <button class="remove-button">Remove</button>
+                    `;
+                    cartItemsContainer.appendChild(cartItem);
+    
+                    let removeButton = cartItem.querySelector('.remove-button');
+                    removeButton.addEventListener('click', function() {
+                        removeItem(cartItem);
+                    });
+    
+                    alert(`${productName} added to the cart.`);
+                }
+            }
+    
+            function findCartItem(productName) {
+                const items = document.querySelectorAll('.cart-item');
+                for (let item of items) {
+                    if (item.firstChild.innerText === productName) {
+                        return item;
+                    }
+                }
+                return null;
+            }
+    
+            function removeItem(cartItem) {
+                let quantity = cartItem.querySelector('.quantity');
+                if (parseInt(quantity.innerText) > 1) {
+                    quantity.innerText = parseInt(quantity.innerText) - 1;
+                } else {
+                    cartItem.remove();
+                }
+            }
+    
+            document.querySelectorAll('.product-button').forEach(button => {
+                button.addEventListener('click', function() {
+                    const product = button.closest('.product');
+                    const productName = product.querySelector('h5').innerText;
+                    const price = product.querySelector('.price').innerText.split('|')[0].trim();
+                    addToCart(productName, price);
+                });
+            });
+        });
+    </script>
     
     
