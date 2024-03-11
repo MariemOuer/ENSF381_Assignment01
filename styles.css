@@ -305,28 +305,66 @@ nav a {
         width: calc(50% - 40px); /* Adjusts width for two products per row on larger screens */
         margin: 20px; 
     }
+} 
+
+/* General styles for the remove button */
+.remove-button {
+    background-color: #4CAF50; /* Match the green background of the ".product-button" */
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, opacity 0.3s; /* For a smooth transition */
+    margin-left: 20px; /* Adds space between the button and the product details */
 }
 
+/* Change the hover effect color for the remove button */
 .remove-button:hover {
-    background-color: #ff0000;
+    background-color: #ff0000; /* Red background for the hover state */
+    color: white; /* Ensures text color is white on hover for visibility */
+    opacity: 1; /* Full opacity */
 }
+
+
+/* Styling for the cart container */
 .cart-container {
-    background-color: #f3f3f3; /* Replace with the actual grey color used for products */
+    background-color: #ddd; /* Same grey as product listings */
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 0 auto;
-    padding: 20px; /* Add some padding for spacing */
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners like product listings */
+    max-width: 100%; /* Control the width or set a specific max-width */
+    box-shadow: none; /* No shadow for a flat design */
+    margin-bottom: 20px; /* Space before the footer */
 }
 
+.cart-item {
+    background-color: #ddd; /* Same as cart-container for a seamless look */
+    padding: 10px; /* Padding inside each cart item */
+    margin: 10px 0; /* Space between each cart item */
+    border-radius: 5px; /* Rounded corners for the cart items */
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Aligns details and button on opposite ends */
+}
+
+/* New styling for the cart item details container */
+.cart-item-details {
+    display: flex;
+    align-items: center; /* This will align items vertically in the middle */
+}
+
+/* No margin between individual text elements to keep them together */
+.cart-item span {
+    margin-right: 0; /* No margin on the right of each span */
+}
+
+/* Add additional bottom margin for the cart container's title and cart items */
 .cart-container h3,
 .cart-container .cart-item {
-    margin-bottom: 20px; /* Space between items */
-}
-
-/* Simplify the cart item styling for a seamless look */
-.cart-item {
-    width: auto;
-    padding: 5px 0;
+    margin-bottom: 20px; /* Space between the title, items, and the next section */
 }
