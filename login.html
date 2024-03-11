@@ -1,15 +1,23 @@
 <!DOCTYPE html>
 <html lang = "en">
     <head>
-        <title>ENSF 381 Assignment1</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="images/icon.ico" type="image/x-icon">
         <link rel = "stylesheet" href = "styles.css">
+        <title>ENSF 381 Assignment1</title>
     </head>
     <body>
         
         <header class="headeri">
-            <img src = "./images/Logo.png">
-            <h1>Skeek</h1>
+            <div>
+                <img src = "./images/Logo.png">
+            </div>
+            
+            <div> 
+                <h1>Skeek</h1> 
+            </div>
+            
         </header>
 
         <nav style="text-align: center" class="main-nav" >
@@ -19,23 +27,30 @@
             <a href = "./contact.html">Contact Page</a>
         </nav>
 
-        <main class="login">
-            <form>
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" placeholder="Enter your Username">
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" placeholder="Enter your Password">    
-                <button onclick="loginCheck()">Login</button>
-                <p >Don't have an account? <a class="signup" href="signup.html">Sign up here</a></p>
-            </form>
-
-        <script></script>
-          
+        <main >
+            <section class="login">
+                <form>
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" placeholder="Enter your Username">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your Password">    
+                    <button onclick="loginCheck()">Login</button>
+                    <p >Don't have an account? <a class="signup" href="signup.html">Sign up here</a></p>
+                </form>
+            </section>
 </main>
-
+<script>
+           
+</script>
+<div id="messageBox" class="message-box">
+    <p id="messageText"></p>
+</div>        
 
 <footer style = "text-align:center"class="footer">
     <p> © 2024 Skeek. All rights reserved </p>
 </footer>
 </body>
 </html>
+
+
+
