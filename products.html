@@ -85,7 +85,7 @@
     <footer class="footer">
         <p>© 2024 Skeek. All rights reserved</p>
     </footer>
-
+    
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             function addToCart(productName, price) {
@@ -95,46 +95,39 @@
                 if (cartItem) {
                     let quantity = cartItem.querySelector('.quantity');
                     quantity.innerText = parseInt(quantity.innerText) + 1;
-                    alert(`${productName} quantity updated in the cart.`);
                 } else {
                     cartItem = document.createElement('div');
                     cartItem.classList.add('cart-item');
                     cartItem.innerHTML = `
-                        <span>${productName}</span> - 
-                        <span>${price}</span> - 
-                        <span class="quantity">1</span>
+                        <div class="cart-item-details">
+                            <span>${productName}</span> - 
+                            <span>${price}</span> - 
+                            <span class="quantity">1</span>
+                        </div>
                         <button class="remove-button">Remove</button>
                     `;
                     cartItemsContainer.appendChild(cartItem);
-    
+        
                     let removeButton = cartItem.querySelector('.remove-button');
                     removeButton.addEventListener('click', function() {
-                        removeItem(cartItem);
+                        removeItem(cartItem, productName);
                     });
-    
-                    alert(`${productName} added to the cart.`);
                 }
             }
-    
+        
             function findCartItem(productName) {
-                const items = document.querySelectorAll('.cart-item');
-                for (let item of items) {
-                    if (item.firstChild.innerText === productName) {
-                        return item;
-                    }
-                }
-                return null;
+                return Array.from(document.querySelectorAll('.cart-item')).find(item => 
+                    item.querySelector('.cart-item-details').innerText.includes(productName));
             }
-    
-            function removeItem(cartItem) {
+        
+            function removeItem(cartItem, productName) {
                 let quantity = cartItem.querySelector('.quantity');
-                if (parseInt(quantity.innerText) > 1) {
-                    quantity.innerText = parseInt(quantity.innerText) - 1;
-                } else {
+                quantity.innerText = parseInt(quantity.innerText) - 1;
+                if (parseInt(quantity.innerText) === 0) {
                     cartItem.remove();
                 }
             }
-    
+        
             document.querySelectorAll('.product-button').forEach(button => {
                 button.addEventListener('click', function() {
                     const product = button.closest('.product');
@@ -145,5 +138,4 @@
             });
         });
     </script>
-    
     

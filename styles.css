@@ -306,28 +306,6 @@ nav a {
         margin: 20px; 
     }
 } 
-
-/* General styles for the remove button */
-.remove-button {
-    background-color: #4CAF50; /* Match the green background of the ".product-button" */
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s, opacity 0.3s; /* For a smooth transition */
-    margin-left: 20px; /* Adds space between the button and the product details */
-}
-
-/* Change the hover effect color for the remove button */
-.remove-button:hover {
-    background-color: #ff0000; /* Red background for the hover state */
-    color: white; /* Ensures text color is white on hover for visibility */
-    opacity: 1; /* Full opacity */
-}
-
-
-/* Styling for the cart container */
 .cart-container {
     background-color: #ddd; /* Same grey as product listings */
     text-align: center;
@@ -343,28 +321,38 @@ nav a {
 }
 
 .cart-item {
-    background-color: #ddd; /* Same as cart-container for a seamless look */
+    background-color: #ddd; /* Seamless appearance with the cart container */
     padding: 10px; /* Padding inside each cart item */
-    margin: 10px 0; /* Space between each cart item */
+    margin-bottom: 10px; /* Space between each cart item */
     border-radius: 5px; /* Rounded corners for the cart items */
-    display: flex;
+    display: grid;
+    grid-template-columns: auto min-content; /* Auto for product details, min-content for the button */
+    gap: 10px; /* Space between the details and the remove button */
     align-items: center;
-    justify-content: space-between; /* Aligns details and button on opposite ends */
 }
 
-/* New styling for the cart item details container */
 .cart-item-details {
     display: flex;
-    align-items: center; /* This will align items vertically in the middle */
+    align-items: center;
+    gap: 10px; /* Space between each piece of product detail */
+}
+.cart-item span, .cart-item .quantity {
+    margin-right: 10px; /* Right margin for space between text elements */
 }
 
-/* No margin between individual text elements to keep them together */
-.cart-item span {
-    margin-right: 0; /* No margin on the right of each span */
+.remove-button {
+    background-color: #4CAF50; /* Match the green background of the ".product-button" */
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, opacity 0.3s; /* For a smooth transition */
+    margin-left: 10px; /* Adds space between the button and the product details */
 }
 
-/* Add additional bottom margin for the cart container's title and cart items */
-.cart-container h3,
-.cart-container .cart-item {
-    margin-bottom: 20px; /* Space between the title, items, and the next section */
+.remove-button:hover {
+    background-color: #ff0000; /* Red background for the hover state */
+    color: white; /* Ensures text color is white on hover for visibility */
+    opacity: 1; /* Full opacity */
 }
