@@ -1,44 +1,46 @@
 <!DOCTYPE html>
-<html lang = "en">
-    <head>
-        <title>ENSF 381 Assignment1</title>
-        <link rel = "stylesheet" href = "styles.css">
-    </head>
-    <body>
-        
-        <header class="headeri">
-            <img src = "./images/Logo.png">
-            <h1>Skeek</h1>
-        </header>
+<html>
+    </style>
+    <title>ENSF 381 Assignment1</title>
+    <link rel="shortcut icon" href="images/icon.ico" type="image/x-icon">
+    <link rel = "stylesheet" href = "styles.css">
+    <header class="headeri">
+        <img src = "./images/Logo.png">
+        <h1>Skeek</h1>
+    </header>
 
-        <nav style="text-align: center" class="main-nav" >
-            <a href = "./index.html">Home Page</a>
-            <a href = "./login.html">Login Page</a>
-            <a href = "./products.html">Our Products</a>
-            <a href = "./contact.html">Contact Page</a>
-        </nav>
+    <nav style="text-align: center" class="main-nav" >
+        <a href = "./index.html">Home Page</a>
+        <a href = "./login.html">Login Page</a>
+        <a href = "./products.html">Our Products</a>
+        <a href = "./contact.html">Contact Page</a>
+    </nav>
+
 
         <main>
-            <section class="login"> 
+            <section class="signup">  
                 <form action="#" method="post" onsubmit="validateForm(); return false;">
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required placeholder="Enter your username">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required placeholder="Enter your username">
 
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required placeholder="Enter your password">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required placeholder="Enter your password">
 
-                <label for="confirm-password">Confirm Password:</label>
-                <input type="password" id="confirm-password" name="confirm-password" required placeholder="Enter your password">
+                    <label for="confirm-password">Confirm Password:</label>
+                    <input type="password" id="confirm-password" name="confirm-password" required placeholder="Enter your password">
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required placeholder="Enter your email">
-                <button type="submit" class="signup-btn">Signup</button>
-            </form>
+                    <label for="email">Email:</label>
+                    <div class="email-button-group">  
+                        <input type="email" id="email" name="email" required placeholder="Enter your email">
+                        <button type="submit" class="signup-botton">Signup</button> 
+                    </div>
+                </form>
             </section>
             <div id="messageBox" style="display: none;">
                 <p id="message"></p>
             </div>
         </main>
+
         <script>
             function validateForm() {
                 var username = document.getElementById("username").value;
