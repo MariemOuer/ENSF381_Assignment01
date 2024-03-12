@@ -219,6 +219,14 @@ nav a {
     text-decoration: underline; /* add underline on hover */
   }
 
+.message-box {
+    border: 2px solid black;
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin: 20px;
+}
+
+
 
 
 /* products page */

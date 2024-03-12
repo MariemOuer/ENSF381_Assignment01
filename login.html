@@ -29,22 +29,83 @@
 
         <main >
             <section class="login">
-                <form>
+                <form >
                     <label for="username">Username:</label>
-                    <input type="text" id="username" name="username" placeholder="Enter your Username">
+                    <input type="text" id="username" name="username" required placeholder ="Enter your Username">
                     <label for="password">Password:</label>
-                    <input type="password" id="password" name="password" placeholder="Enter your Password">    
-                    <button onclick="loginCheck()">Login</button>
+                    <input type="password" id="password" name="password" required placeholder="Enter your Password">    
+                    <button type="submit"> Login </button>
                     <p >Don't have an account? <a class="signup" href="signup.html">Sign up here</a></p>
                 </form>
             </section>
+            <div id="message-box">
+                <p id="message" > </p>
+            </div>
 </main>
 <script>
-           
-</script>
-<div id="messageBox" class="message-box">
-    <p id="messageText"></p>
-</div>        
+   document.addEventListener('DOMContentLoaded', function afterRender() {
+            const submitButton = document.querySelector('button[type="submit"]');
+            submitButton.addEventListener('click', function() {
+            submitButton.value = 'Submitted'; 
+            login();
+            submitButton.disabled = true; 
+            document.getElementById("message-box").setAttribute("class" , 'message-box');
+            });
+        });
+
+        // Function to fetch username and id
+        async function fetchUsers(inputName, inputPassword) {
+            try {
+                let response = await fetch('https://jsonplaceholder.typicode.com/users');
+                let Users = await response.json();
+                let username=[];
+                Users.forEach(element => {
+                    username.push(element.username);
+                });
+                if (username.includes(inputName)){
+                    Users.forEach(element => {
+                        if (element.username == inputName){
+                            element.email == inputPassword ? loginSuccess() : error_Input();
+                        }
+                    });
+                }
+                else{
+                    error_Input();
+                }
+            } catch (error) {
+                console.error('Error fetching users:', error);
+            }
+        }
+
+        function loginSuccess() {
+            console.log("Success");
+            const submitButton = document.querySelector('button[type="submit"]');   
+            showMessage("Login Successful!");
+            submitButton.disabled = false;
+        }
+        function error_Input() {
+            console.log("Fail");
+            const submitButton = document.querySelector('button[type="submit"]');
+            showMessage("Invalid username or password");
+            submitButton.disabled = false;
+        }
+        
+
+        function login() {
+            
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            console.log("Username: " + username);
+            console.log("Password: " + password);
+            fetchUsers(username,password);
+        }   
+
+        function showMessage(message) {
+            var messageElement = document.getElementById('message');
+            messageElement.innerText = message;
+        }
+
+</script>  
 
 <footer style = "text-align:center"class="footer">
     <p> © 2024 Skeek. All rights reserved </p>
