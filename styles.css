@@ -364,6 +364,7 @@ nav a {
     color: white; 
     opacity: 1; /*  opacity of 1 */
 }
+ 
 
 /* Signup page */
 .signup {
@@ -376,10 +377,12 @@ nav a {
     margin: 20px;
     border-radius: 10px;
 }
+
 .signup label {
     display: block;
     margin: 10px;
 }
+
 .signup input[type="text"],
 .signup input[type="password"],
 .signup input[type="email"] {
@@ -389,14 +392,21 @@ nav a {
     border-radius: 5px;
     border: 1px solid darkgrey;
     box-sizing: border-box;
+    /* Include required attribute in HTML for these inputs */
 }
+
+/* Placeholder Styling */
+.signup input::placeholder {
+    color: #888;
+}
+
 /* Email Input and Signup Button Group */
 .email-button-group {
     display: flex;
     align-items: center;
 }
 
-/* Button  */
+/* Button */
 .signup-botton {
     background-color: #4CAF50;
     color: white;
