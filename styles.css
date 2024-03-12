@@ -366,3 +366,51 @@ nav a {
     color: white; /* Ensures text color is white on hover for visibility */
     opacity: 1; /* Full opacity */
 }
+
+/* Signup page */
+.signup {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    background-color: #ddd;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+}
+.signup label {
+    display: block;
+    margin: 10px;
+}
+.signup input[type="text"],
+.signup input[type="password"],
+.signup input[type="email"] {
+    background-color: #fff;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid darkgrey;
+    box-sizing: border-box;
+}
+/* Email Input and Signup Button Group */
+.email-button-group {
+    display: flex;
+    align-items: center;
+}
+
+/* Button  */
+.signup-botton {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    opacity: 0.5;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.signup-botton:hover {
+    background-color: #45A049;
+    opacity: 1.0;
+}
