@@ -322,16 +322,15 @@ nav a {
     align-items: center;
     margin: 0 auto;
     padding: 20px;
-    border-radius: 8px; /* Rounded corners like product listings */
-    max-width: 100%; /* Control the width or set a specific max-width */
-    box-shadow: none; /* No shadow for a flat design */
+    border-radius: 8px;  
+    max-width: 100%; 
     margin-bottom: 20px; /* Space before the footer */
 }
 
 .cart-item {
-    background-color: #ddd; /* Seamless appearance with the cart container */
+    background-color: #ddd; /* background colour */
     padding: 10px; /* Padding inside each cart item */
-    margin-bottom: 10px; /* Space between each cart item */
+    margin-bottom: 10px; /* Space between each cart item  ( to avoid overlapping) */
     border-radius: 5px; /* Rounded corners for the cart items */
     display: grid;
     grid-template-columns: auto min-content; /* Auto for product details, min-content for the button */
@@ -347,24 +346,23 @@ nav a {
     gap: 10px; /* Space between each piece of product detail */
 }
 .cart-item span, .cart-item .quantity {
-    margin-right: 10px; /* Right margin for space between text elements */
+    margin-right: 10px; /* space between text elements */
 }
 
 .remove-button {
-    background-color: #4CAF50; /* Match the green background of the ".product-button" */
+    background-color: #4CAF50;  
     color: white;
     padding: 10px;
-    border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s, opacity 0.3s; /* For a smooth transition */
-    margin-left: 10px; /* Adds space between the button and the product details */
+    transition: background-color 0.3s, opacity 0.3s; /* transition */
+    margin-left: 10px; /* Adds space between the button and the product  */
 }
 
 .remove-button:hover {
     background-color: #ff0000; /* Red background for the hover state */
-    color: white; /* Ensures text color is white on hover for visibility */
-    opacity: 1; /* Full opacity */
+    color: white; 
+    opacity: 1; /*  opacity of 1 */
 }
 
 /* Signup page */
@@ -404,7 +402,6 @@ nav a {
     color: white;
     padding: 10px;
     border-radius: 5px;
-    border: none;
     opacity: 0.5;
     cursor: pointer;
     box-sizing: border-box;
