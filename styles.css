@@ -240,7 +240,15 @@ nav a {
     border-radius: 8px; /* Rounds the corners */
     max-width: 100%;  
 }
-
+/*added*/
+.container, .cart {
+    width: calc(100% - 320px); /* Adjust the width to leave space for the cart */
+}
+body {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    background-color: #ddd; /* Set a default background color */
+}
 /* Styling for product */
 .product {
     background-color: #f9f9f9; /* Light grey background */
@@ -302,10 +310,15 @@ nav a {
 
 /* Responsive design for smaller screens - used the lab as reference*/
 @media (max-width: 768px) {
-    .product {
-        width: 100%; 
+    .container, .cart {
+        width: 100%; /* Full width on smaller screens */
+    }
+    .cart {
+        position: relative; /* Change position to relative for smaller screens */
+        height: auto; /* Auto height for better mobile view */
     }
 }
+
 
 /* Responsive design for larger screens - used the lab as reference*/
 @media (min-width: 769px) {
@@ -314,6 +327,18 @@ nav a {
         margin: 20px; 
     }
 }  
+/* CSS for shopping cart */
+.cart {
+    position: fixed; /* Fixed positioning keeps the cart stationary */
+    top: 0; /* Align to the top */
+    right: 0; /* Align to the right side of the viewport */
+    height: 100vh; /* Full viewport height */
+    width: 300px; /* Set a fixed width for the cart */
+    overflow-y: auto; /* Enable scrolling for overflow content */
+    background-color: #ddd; /* Medium gray background */
+    padding: 20px;
+    border-radius: 8px; /* Rounds the corners */
+}
 .cart-container {
     background-color: #ddd; /* Same grey as product listings */
     text-align: center;
@@ -328,16 +353,18 @@ nav a {
 }
 
 .cart-item {
-    background-color: #ddd; /* background colour */
-    padding: 10px; /* Padding inside each cart item */
-    margin-bottom: 10px; /* Space between each cart item  ( to avoid overlapping) */
-    border-radius: 5px; /* Rounded corners for the cart items */
-    display: grid;
-    grid-template-columns: auto min-content; /* Auto for product details, min-content for the button */
-    gap: 10px; /* Space between the details and the remove button */
-    align-items: center;
-    max-width: 80%; /* Limit the width of each cart item */
-    margin: 0 auto; /* Center each cart item */
+    background-color: #f9f9f9; /* Light grey background */
+    padding: 20px; /* Adds padding inside each item */
+    box-sizing: border-box;
+    border-radius: 10px; /* Rounds the corners of each item */
+    display: flex;
+    flex-direction: column; /* Display image and text vertically */
+    align-items: center; /* Center items horizontally */
+    margin-bottom: 20px; /* Adds space below each item */
+    transition: background-color 0.3s ease;
+    width: 90%; /* Adjust width to leave space for margin */
+    max-width: 300px; /* Limit maximum width */
+    text-align: center; /* Center text */
 }
 
 .cart-item-details {
@@ -348,7 +375,16 @@ nav a {
 .cart-item span, .cart-item .quantity {
     margin-right: 10px; /* space between text elements */
 }
-
+.cart-item:hover {
+    background-color: #ffffff; /* Changes background to white on hover */
+}
+.cart-item img {
+    width: 50%; /* Responsive width for image */
+    max-width: 150px; /* Limit maximum width */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 8px;
+    margin-bottom: 10px; /* Add margin to the bottom for spacing */
+}
 .remove-button {
     background-color: #4CAF50;  
     color: white;
