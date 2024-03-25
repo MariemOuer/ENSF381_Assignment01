@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import reviewsData from "../data/reviews.js";
-import {BrowserRouter as useNavigate } from "react-router-dom";
+import {BrowserRouter as Router, useNavigate } from "react-router-dom";
 
 const HomeMainSection = () => {
 	const [reviews, setReviews] = useState([]);
@@ -11,6 +11,7 @@ const HomeMainSection = () => {
 		setReviews(randomReviews);
 	}, []);
 
+	// Function to get random reviews
 	const getRandomReviews = (reviewsArray, count) => {
 		const shuffled = reviewsArray.sort(() => 0.5 - Math.random());
 		return shuffled.slice(0, count);
@@ -23,8 +24,8 @@ const HomeMainSection = () => {
 	}
 
 	return (
-		<div>
-			<section class = "about-us">
+		<div class ="home-main-section">
+			<section class ="about-us-section">
 				<h2>About Us</h2>
 				<p>At Skeek, we are more than just an online sneaker shop; we are a passionate community of sneaker enthusiasts 
                 dedicated to bringing you the latest and greatest in sneaker fashion. Born out of a shared love for kicks and 
@@ -38,14 +39,14 @@ const HomeMainSection = () => {
 				</button>
 
 			</section>
-			<section class="customer-reviews-section">
+			<section class ="customer-reviews-section">
 				<h2>Customer Reviews</h2>
-				<div class="customer-reviews">
+				<div class ="customer-reviews">
 					{reviews.map((review, index) => (
-						<div key={index} class="review">
+						<div key={index} class ="review">
 							<p>{review.customerName}</p>
 							<p>{review.reviewContent}</p>
-							<p>{"⭐".repeat(review.stars)}</p>
+							<p>{"★".repeat(review.stars)}</p>
 						</div>
 					))}
 				</div>
@@ -55,4 +56,3 @@ const HomeMainSection = () => {
 };
 
 export default HomeMainSection;
-

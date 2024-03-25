@@ -1,5 +1,4 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Homepage from './component/Homepage.js'; 
 import ProductPage from './component/Productpage.js'; 
 import './App.css';
@@ -17,3 +16,4 @@ function App() {
 }
 
 export default App;
+

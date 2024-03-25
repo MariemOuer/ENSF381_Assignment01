@@ -1,22 +1,19 @@
-import React from 'react';
+import React from "react";
 
-function Header() {
-    return (
-        <div>
-            <header class="header">
-                <div>
-                <img src = "./my-ecommerce-app/public/images/logo.png" alt="Logo"></img>
-                </div>
-                <h1>Skeek</h1>
-            </header>
-
-            <nav class="main-nav">
-            <a href = "./index.html">Home Page</a>
-            <a href = "./login.html">Login Page</a>
-            <a href = "./products.html">Our Products</a>
-            </nav>
-        </div>
-    );
-}
+const Header = () => {
+	return (
+		<header>
+			<div className="logo2">
+				<img src="/images/logo.png" alt="Company Logo" />
+			</div>
+			<div className="comp-name">Skeek</div>
+			<nav>
+				<a href="/">Home</a>
+				<a href="./Productpage.js">Products</a>
+				<a href="/login">Login</a>
+			</nav>
+		</header>
+	);
+};
 
 export default Header;

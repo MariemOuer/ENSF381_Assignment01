@@ -1,16 +1,20 @@
 import React from "react";
-import Header from "./Header.js";
-import HomeMainSection from "./Homemainsection.js";
-import Footer from "./Footer.js";
+import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Header from "./Header";
+import HomeMainSection from "./Homemainsection";
+import Footer from "./Footer";
 
-function Homepage() {
-  return (
-    <div>
-      <Header />
-      <HomeMainSection />
-      <Footer />      
-    </div>
-  );
-}
+const Homepage = () => {
+	return (
+		<BrowserRouter>
+			<div class = "homepage">
+				<Header />
+				<HomeMainSection />
+				<Footer />
+			</div>
+		</BrowserRouter>
+	);
+};
 
 export default Homepage;

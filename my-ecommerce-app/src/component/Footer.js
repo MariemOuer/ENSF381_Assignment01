@@ -6,6 +6,6 @@ function Footer() {
       <p>&copy; Copyright Skeek</p>
     </footer>
   );
-}
+};
 
 export default Footer;
