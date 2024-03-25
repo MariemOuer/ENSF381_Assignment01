@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import reviewsData from "./data/reviews.js";
+import reviewsData from "../data/reviews.js";
 import {BrowserRouter as useNavigate } from "react-router-dom";
 
 const HomeMainSection = () => {
