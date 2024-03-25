@@ -3,7 +3,7 @@ import React from "react";
 const Header = () => {
 	return (
 		<header>
-			<div className="logo2">
+			<div className="logo">
 				<img src="/images/logo.png" alt="Company Logo" />
 			</div>
 			<div className="comp-name">Skeek</div>
