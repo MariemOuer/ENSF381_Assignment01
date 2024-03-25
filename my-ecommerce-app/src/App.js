@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Homepage from './component/Homepage'; // Adjust the import path as necessary
+import Homepage from './component/Homepage.js'; 
 import './App.css';
 
 function App() {
