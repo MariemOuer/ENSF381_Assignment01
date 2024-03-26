@@ -134,39 +134,69 @@ class Shop extends Component {
  }
 
 
-   renderCartItem = (item, index) => {
-     return (
-         <div className="cart-item" key={index}>
-             <img src={item.product.imageSrc} alt={item.product.name} />
-             <div>
-                 <p>{item.product.name}</p>
-                 <p>{item.product.price} (x{item.quantity})</p>
-                 <button onClick={() => this.removeFromCart(index)}>Remove</button>
-             </div>
-         </div>
-     );
- }
-    render() {
-     const { products, cartItems } = this.state;
-     const mensShoes = products.filter(product => product.gender === 'men');
-     const womensShoes = products.filter(product => product.gender === 'women');
+ renderCartItem = (item, index) => {
+    // Extract the numeric value from the price string
+    const priceValue = parseFloat(item.product.price.replace('$', ''));
+    // Calculate the total price for this item
+    const totalPrice = (priceValue * item.quantity).toFixed(2);
+
     return (
-     <div>
-       <div className="container">
-         <h2 className="section-title">Men's Shoes</h2> {/* Static title for Men's Shoes with specific class */}
-         {mensShoes.map(this.renderProduct)}
-       </div>
-       <div className="container">
-         <h2 className="section-title">Women's Shoes</h2> {/* Static title for Women's Shoes with specific class */}
-         {womensShoes.map(this.renderProduct)}
-       </div>
-       <div className="cart">
-         <h2 className="section-title">Shopping Cart</h2>
-         {cartItems.map(this.renderCartItem)}
-       </div>
-     </div>
-   );
- }
+        <div className="cart-item" key={index}>
+            <img src={item.product.imageSrc} alt={item.product.name} />
+            <div>
+                {/* Display product name */}
+                <p>{item.product.name}</p>
+                {/* Display unit price */}
+                <p>Price: ${priceValue}</p>
+                {/* Display quantity */}
+                <p>Quantity: {item.quantity}</p>
+                {/* Display total price */}
+                <button onClick={() => this.removeFromCart(index)}>Remove</button>
+                <p>Total: ${totalPrice}</p>
+                {/* Remove button */}
+                
+            </div>
+        </div>
+    );
+}
+        calculateTotal = () => {
+            const { cartItems } = this.state;
+            let total = 0;
+            cartItems.forEach(item => {
+                const priceValue = parseFloat(item.product.price.replace('$', ''));
+                total += priceValue * item.quantity;
+            });
+            return total.toFixed(2);
+}
+
+
+render() {
+    const { products, cartItems } = this.state;
+    const mensShoes = products.filter(product => product.gender === 'men');
+    const womensShoes = products.filter(product => product.gender === 'women');
+    const total = this.calculateTotal(); // Calculate the total price
+
+    return (
+        <div>
+            <div className="container">
+                <h2 className="section-title">Men's Shoes</h2>
+                {mensShoes.map(this.renderProduct)}
+            </div>
+            <div className="container">
+                <h2 className="section-title">Women's Shoes</h2>
+                {womensShoes.map(this.renderProduct)}
+            </div>
+            <div className="cart">
+                <h2 className="section-title">Shopping Cart</h2>
+                {cartItems.map(this.renderCartItem)}
+                {/* Display the total price at the end of the cart */}
+                <div className="cart-total">
+                    <h3>Total: ${total}</h3>
+                </div>
+            </div>
+        </div>
+    );
+}
 }
 
 
